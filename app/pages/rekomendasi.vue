@@ -80,7 +80,7 @@ function kategoriIcon(kat: string) {
 
     <!-- Hero -->
     <section class="bg-[#f1f1f1] border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-6 py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <NuxtLink to="/" class="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-800 mb-5 transition-colors font-medium">
           <Icon name="mdi:arrow-left" class="text-sm" />
           Kembali ke Jadwal
@@ -97,9 +97,9 @@ function kategoriIcon(kat: string) {
       </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-10">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
       <!-- Tipe Selector -->
-      <div class="flex gap-3 mb-2 flex-wrap">
+      <div class="flex gap-2 sm:gap-3 mb-2 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
         <button
           v-for="tipe in ['harian', 'mingguan', 'bulanan'] as const"
           :key="tipe"
@@ -129,7 +129,7 @@ function kategoriIcon(kat: string) {
       </div>
 
       <!-- Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-8">
         <div
           v-for="(item, i) in rekomendasi?.[selectedTipe] || []"
           :key="i"
@@ -179,7 +179,7 @@ function kategoriIcon(kat: string) {
       </div>
 
       <!-- Impor Semua -->
-      <div class="bg-[#f1f1f1] border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="bg-[#f1f1f1] border border-slate-200 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h3 class="text-slate-900 font-bold mb-1">Impor Program Lengkap</h3>
           <p class="text-slate-500 text-sm">
