@@ -88,7 +88,7 @@
               </div>
               <div>
                 <p class="text-slate-900 font-bold text-sm">Lokasi</p>
-                <p class="text-[#f1a80a] font-semibold text-sm mt-0.5">JBali, Indonesia</p>
+                <p class="text-[#f1a80a] font-semibold text-sm mt-0.5">Bali, Indonesia</p>
                 <p class="text-slate-400 text-xs mt-1">Jam kerja: Senin–Jumat</p>
               </div>
               <Icon name="mdi:arrow-right" class="text-slate-300 group-hover:text-[#f1a80a] ml-auto transition-colors" />
