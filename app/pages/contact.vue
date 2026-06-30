@@ -38,7 +38,7 @@
             <p class="text-amber-900 text-xs font-semibold mt-0.5">09.00–17.00 WIB</p>
           </div>
           <div>
-            <p class="text-white font-extrabold text-2xl">Jakarta</p>
+            <p class="text-white font-extrabold text-2xl">Bali</p>
             <p class="text-amber-900 text-xs font-semibold mt-0.5">Indonesia</p>
           </div>
         </div>
@@ -88,7 +88,7 @@
               </div>
               <div>
                 <p class="text-slate-900 font-bold text-sm">Lokasi</p>
-                <p class="text-[#f1a80a] font-semibold text-sm mt-0.5">Jakarta, Indonesia</p>
+                <p class="text-[#f1a80a] font-semibold text-sm mt-0.5">JBali, Indonesia</p>
                 <p class="text-slate-400 text-xs mt-1">Jam kerja: Senin–Jumat</p>
               </div>
               <Icon name="mdi:arrow-right" class="text-slate-300 group-hover:text-[#f1a80a] ml-auto transition-colors" />
@@ -100,15 +100,15 @@
             <p class="text-white font-bold mb-1">Ikuti Kami</p>
             <p class="text-slate-400 text-xs mb-5">Update terbaru seputar fitur dan tips latihan</p>
             <div class="flex gap-3">
-              <a href="#" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-[#f1a80a] rounded-xl text-white text-xs font-semibold transition-colors group">
+              <a href="https://www.instagram.com/tristaneffendy8342/" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-[#f1a80a] rounded-xl text-white text-xs font-semibold transition-colors group">
                 <Icon name="mdi:instagram" class="text-lg" />
                 Instagram
               </a>
-              <a href="#" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-[#f1a80a] rounded-xl text-white text-xs font-semibold transition-colors group">
+              <a href="https://www.facebook.com/share/1BoGZkgSTG/" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-[#f1a80a] rounded-xl text-white text-xs font-semibold transition-colors group">
                 <Icon name="mdi:twitter" class="text-lg" />
-                Twitter
+                Facebook
               </a>
-              <a href="#" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-[#f1a80a] rounded-xl text-white text-xs font-semibold transition-colors group">
+              <a href="https://www.youtube.com/@TristD" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-[#f1a80a] rounded-xl text-white text-xs font-semibold transition-colors group">
                 <Icon name="mdi:youtube" class="text-lg" />
                 YouTube
               </a>
@@ -182,7 +182,7 @@
               <p class="text-white font-extrabold text-lg leading-tight mb-1">Masih ada pertanyaan?</p>
               <p class="text-amber-100 text-xs mb-5 leading-relaxed">Jangan ragu untuk langsung menghubungi kami via email. Tim kami siap membantu!</p>
               <a
-                href="mailto:hello@trainlog.id"
+                href="mailto:tristaneffendy8@gmail.com "
                 class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#f1a80a] text-sm font-extrabold rounded-xl hover:bg-amber-50 transition-colors shadow-sm"
               >
                 <Icon name="mdi:email-outline" />
