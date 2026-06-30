@@ -175,18 +175,18 @@ function kategoriIcon(kat: string) {
 
     <!-- Hero Section -->
     <section class="bg-[#f1f1f1] border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-6 py-14 flex flex-col lg:flex-row items-center gap-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 flex flex-col lg:flex-row items-stretch lg:items-center gap-8 lg:gap-10">
         <div class="flex-1">
           <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#f1a80a] mb-3">
             Manajemen Latihan
           </span>
-          <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            Jadwal Latihanmu,<br/>Satu Tempat.
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+            Jadwal Latihanmu,<br class="hidden sm:block"/> Satu Tempat.
           </h1>
-          <p class="text-slate-500 text-lg mb-6 max-w-md leading-relaxed">
+          <p class="text-slate-500 text-base sm:text-lg mb-6 max-w-md leading-relaxed">
             Catat rutinitas harian, mingguan, dan bulanan. Pantau progres dan tetap konsisten setiap hari.
           </p>
-          <div class="flex gap-3">
+          <div class="flex flex-col xs:flex-row gap-3">
             <button
               @click="openAddModal"
               class="px-5 py-2.5 bg-[#f1a80a] hover:bg-[#e09b07] text-white font-semibold rounded-lg text-sm transition-colors shadow-sm"
@@ -195,7 +195,7 @@ function kategoriIcon(kat: string) {
             </button>
             <NuxtLink
               to="/rekomendasi"
-              class="px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-lg text-sm border border-slate-200 transition-colors"
+              class="px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-lg text-sm border border-slate-200 transition-colors text-center"
             >
               Lihat Rekomendasi
             </NuxtLink>
@@ -204,20 +204,20 @@ function kategoriIcon(kat: string) {
 
         <!-- Stats di hero -->
         <div class="flex-shrink-0 grid grid-cols-2 gap-3 w-full lg:w-auto">
-          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm text-center min-w-[120px]">
-            <p class="text-3xl font-extrabold text-slate-900">{{ stats.total }}</p>
+          <div class="bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center lg:min-w-[120px]">
+            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">{{ stats.total }}</p>
             <p class="text-xs text-slate-400 font-medium mt-1">Total Jadwal</p>
           </div>
-          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm text-center min-w-[120px]">
-            <p class="text-3xl font-extrabold text-blue-600">{{ stats.aktif }}</p>
+          <div class="bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center lg:min-w-[120px]">
+            <p class="text-2xl sm:text-3xl font-extrabold text-blue-600">{{ stats.aktif }}</p>
             <p class="text-xs text-slate-400 font-medium mt-1">Sedang Aktif</p>
           </div>
-          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm text-center min-w-[120px]">
-            <p class="text-3xl font-extrabold text-green-600">{{ stats.selesai }}</p>
+          <div class="bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center lg:min-w-[120px]">
+            <p class="text-2xl sm:text-3xl font-extrabold text-green-600">{{ stats.selesai }}</p>
             <p class="text-xs text-slate-400 font-medium mt-1">Selesai</p>
           </div>
-          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm text-center min-w-[120px]">
-            <p class="text-3xl font-extrabold text-amber-500">{{ stats.ditunda }}</p>
+          <div class="bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center lg:min-w-[120px]">
+            <p class="text-2xl sm:text-3xl font-extrabold text-amber-500">{{ stats.ditunda }}</p>
             <p class="text-xs text-slate-400 font-medium mt-1">Ditunda</p>
           </div>
         </div>
@@ -225,22 +225,22 @@ function kategoriIcon(kat: string) {
     </section>
 
     <!-- Filter & List Section -->
-    <section class="max-w-6xl mx-auto px-6 py-10">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
       <!-- Filter Bar -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+      <div class="flex flex-col gap-4 mb-6 sm:mb-8">
         <div>
-          <h2 class="text-2xl font-extrabold text-slate-900">Daftar Jadwal</h2>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Daftar Jadwal</h2>
           <p class="text-slate-400 text-sm mt-0.5">
             {{ filteredJadwal.length }} jadwal {{ filterTipe !== 'semua' ? tipeLabel(filterTipe) : '' }} ditemukan
           </p>
         </div>
-        <div class="flex gap-2 flex-wrap">
+        <div class="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
           <button
             v-for="tipe in ['semua', 'harian', 'mingguan', 'bulanan']"
             :key="tipe"
             @click="filterTipe = tipe"
             :class="[
-              'px-4 py-2 rounded-lg text-sm font-semibold transition-colors border',
+              'px-4 py-2 rounded-lg text-sm font-semibold transition-colors border flex-shrink-0',
               filterTipe === tipe
                 ? 'bg-slate-900 text-white border-slate-900'
                 : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-900'
@@ -252,13 +252,13 @@ function kategoriIcon(kat: string) {
       </div>
 
       <!-- Empty State -->
-      <div v-if="filteredJadwal.length === 0" class="border-2 border-dashed border-slate-200 rounded-2xl py-20 text-center">
+      <div v-if="filteredJadwal.length === 0" class="border-2 border-dashed border-slate-200 rounded-2xl py-16 sm:py-20 text-center px-4">
         <div class="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
           <Icon name="mdi:calendar-blank-outline" class="text-slate-400 text-3xl" />
         </div>
         <p class="text-slate-700 font-semibold mb-1">Belum ada jadwal</p>
         <p class="text-slate-400 text-sm mb-5">Buat jadwal pertamamu atau impor dari rekomendasi.</p>
-        <div class="flex gap-3 justify-center">
+        <div class="flex flex-col xs:flex-row gap-3 justify-center">
           <button
             @click="openAddModal"
             class="px-5 py-2 bg-[#f1a80a] hover:bg-[#e09b07] text-white text-sm font-semibold rounded-lg transition-colors"
@@ -275,7 +275,7 @@ function kategoriIcon(kat: string) {
       </div>
 
       <!-- Jadwal Grid -->
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         <div
           v-for="jadwal in filteredJadwal"
           :key="jadwal.id"
@@ -284,7 +284,7 @@ function kategoriIcon(kat: string) {
           <!-- Color bar atas -->
           <div class="h-1.5 w-full" :style="{ backgroundColor: jadwal.warna }" />
 
-          <div class="p-5">
+          <div class="p-4 sm:p-5">
             <!-- Header Card -->
             <div class="flex items-start justify-between mb-3">
               <div class="flex items-center gap-2.5 flex-1 min-w-0">
@@ -300,7 +300,7 @@ function kategoriIcon(kat: string) {
                 </div>
               </div>
               <!-- Action buttons -->
-              <div class="flex items-center gap-1 ml-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="flex items-center gap-1 ml-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                 <button
                   @click="openEditModal(jadwal)"
                   class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
@@ -357,12 +357,12 @@ function kategoriIcon(kat: string) {
       <Transition name="fade">
         <div
           v-if="showModal"
-          class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
+          class="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/40 backdrop-blur-sm"
           @click.self="showModal = false"
         >
-          <div class="bg-white border border-slate-200 rounded-2xl w-full max-w-lg shadow-2xl">
-            <div class="flex items-center justify-between px-6 py-5 border-b border-slate-100">
-              <h2 class="text-slate-900 font-bold text-lg">
+          <div class="bg-white border border-slate-200 w-full sm:max-w-lg sm:rounded-2xl rounded-t-2xl shadow-2xl max-h-[92vh] sm:max-h-[85vh] flex flex-col">
+            <div class="flex items-center justify-between px-5 sm:px-6 py-4 sm:py-5 border-b border-slate-100 flex-shrink-0">
+              <h2 class="text-slate-900 font-bold text-base sm:text-lg">
                 {{ editMode ? 'Edit Jadwal' : 'Tambah Jadwal Baru' }}
               </h2>
               <button @click="showModal = false" class="text-slate-400 hover:text-slate-700 transition-colors">
@@ -370,7 +370,7 @@ function kategoriIcon(kat: string) {
               </button>
             </div>
 
-            <div class="px-6 py-5 space-y-4 max-h-[70vh] overflow-y-auto">
+            <div class="px-5 sm:px-6 py-5 space-y-4 overflow-y-auto flex-1">
               <!-- Judul -->
               <div>
                 <label class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5 block">Judul *</label>
@@ -490,7 +490,7 @@ function kategoriIcon(kat: string) {
               </div>
             </div>
 
-            <div class="flex gap-3 px-6 py-4 border-t border-slate-100">
+            <div class="flex gap-3 px-5 sm:px-6 py-4 border-t border-slate-100 flex-shrink-0">
               <button
                 @click="showModal = false"
                 class="flex-1 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors"
@@ -517,7 +517,7 @@ function kategoriIcon(kat: string) {
           class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
           @click.self="showDeleteConfirm = false"
         >
-          <div class="bg-white border border-slate-200 rounded-2xl w-full max-w-sm shadow-2xl p-6 text-center">
+          <div class="bg-white border border-slate-200 rounded-2xl w-full max-w-sm shadow-2xl p-5 sm:p-6 text-center">
             <div class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mx-auto mb-4">
               <Icon name="mdi:trash-can-outline" class="text-red-500 text-2xl" />
             </div>
